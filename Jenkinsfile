@@ -45,7 +45,7 @@ pipeline {
              script {
                sh '''
                   docker stop $IMAGE_NAME
-                  dokcer rm -f $IMAGE_NAME
+                  docker rm -f $IMAGE_NAME
                '''
              }
           }
