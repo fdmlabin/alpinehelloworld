@@ -1,5 +1,5 @@
 /* import shared library*/
-@Library('shared-library')_
+// @Library('shared-library')_
 pipeline {
   environment {
     IMAGE_NAME = "alpinehelloworld"
@@ -101,11 +101,11 @@ pipeline {
 //       slackSend (color: '#FF0000', message: "FAILED: Job '${env.JOB_NAME} [{env.BUILD_NUMBER}]' (${env.BUILD_URL})")
 //     }
 //   }
-  post {
-    always {
-      script {
-        slackNotifier currentBuild.result
-      }
-    }
-  }
+//   post {
+//     always {
+//       script {
+//         slackNotifier currentBuild.result
+//       }
+//     }
+//   }
 }
